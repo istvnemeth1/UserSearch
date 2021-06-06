@@ -15,13 +15,13 @@ function pageLoad(user) {
         const cardData = document.querySelector('#data');
         cardData.insertAdjacentHTML('afterbegin', `<h3>${userProfs[i].firstName} ${userProfs[i].secondName}</h3>`);
         cardData.insertAdjacentHTML('beforeend', `<p>${userProfs[i].age}</p>`);
-    
+        let userProfsArray = Object.values(userProfs[i]);
         input.oninput = function () {
             // Onlu show user card's wich have the input.value of the First or Second name or the age.
             const name = document.querySelector('h3');
             const age = document.querySelector('p');
-            if (userProfs[i].firstName.includes(input.value) || userProfs[i].secondName.includes(input.value) || userProfs[i].age.includes(input.value)) {
-                return name.style.color = rgb(207, 0, 0);
+            if (userProfsArray[0].includes(input.value) || userProfsArray[1].includes(input.value) || userProfsArray[2].includes(input.value)) {
+                return name.style.backgroundColor = "yellow";
             } else {
                 console.log('type something valid');
             }
