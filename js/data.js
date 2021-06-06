@@ -1,4 +1,4 @@
-const users = [
+const userProfs = [
     { firstName: "Lelia", secondName: "Ricketson", age: "49" },
     { firstName: "James", secondName: "Nielsen", age: "35" },
     { firstName: "Ryan", secondName: "Wilson", age: "32" },
